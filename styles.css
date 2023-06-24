@@ -8,6 +8,7 @@ body {
     flex-wrap:wrap;
     margin:0;
     padding:0;
+    min-width:705px;
 }
 
 

@@ -1,0 +1,193 @@
+@font-face {
+    font-family: myFont;
+    src:url(Typeface.otf);
+}
+
+body {
+    display:flex;
+    flex-wrap:wrap;
+    margin:0;
+    padding:0;
+}
+
+
+.leftSide{
+    font-family: myFont;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    flex:3;
+    min-width:539.14px;
+    height:100vh;
+    background-image:url(blake-carpenter-UeVS0ab-fl0-unsplash.jpg);
+    background-size:cover;
+   
+}
+
+
+.sidebar {
+    margin-top:200px;
+    display:flex;
+    justify-content: center;
+}
+.pixeltruck img{
+    display:flex;
+    height:2.5rem;
+    margin-right:2rem;
+
+}
+
+.sidebar p {
+    padding:5px;
+    font-size:2rem;
+    margin:0;
+}
+
+.leftSide footer{
+    margin-bottom:2.5vh;
+    color:gray;
+    text-align:center;
+}
+
+.leftSide a {
+    color:rgb(48, 48, 48);
+}
+
+.rightSide {
+    font-family:'Courier New', Courier, monospace;
+    font-size:.9rem;
+    display:flex;
+    flex-direction:column;
+    background-color:rgb(214, 214, 214);
+    flex:4;
+    min-width:700px;
+    max-height:100vh;
+
+}
+
+.rightSide  .header {
+    margin-left:4rem;
+    margin-right:4rem;
+    margin-top:5rem;
+}
+
+.rightSide p {
+    font-size:1rem;
+    font-weight:900;
+}
+
+.rightSide .form {
+    box-sizing: border-box;
+    box-shadow:  6px 10px 10px rgba(72, 175, 235, 0.278);
+    background-color:aliceblue;
+    padding-top:10px;
+    padding-bottom:40px;
+    position:relative;
+}
+
+.form h1 {
+    font-size:1.5rem;
+    margin-left:4rem;
+    margin-right:4rem;
+    margin-bottom:1.75rem;
+}
+
+.form .container1 {
+    margin-left:4rem;
+    margin-right:4rem;
+    display:flex;
+    flex-wrap:wrap;
+    max-width: 600px;
+
+}
+
+
+
+.form-row {
+    display:flex;
+    flex-direction:column;
+    margin-right:4rem;
+    margin-top:1rem;
+    font-family:'Courier New', Courier, monospace;
+  
+}
+
+.form-row input {
+    margin-top:3px;
+    appearance: none;
+    border: solid rgba(202, 202, 202, 0.753);
+    border-width:1px;
+    border-radius:2px;
+    width:220px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+    outline:none;
+    border:solid aqua 2px;
+}
+
+.form-row input[type="submit"] {
+    position:absolute;
+    top:21rem;
+    left:4rem;
+    border-radius:10px;
+    background-color: rgb(18, 71, 18);
+    padding: 10px 0px;
+    font-size:1rem;
+    font-weight:600;
+    color:white;
+   
+}
+
+.rightSide .existingUser {
+    margin-left:4rem;
+    margin-top:6rem;
+    font-weight:200;
+}
+
+.existingUser a {
+    color:rgb(18, 71, 18);
+}
+
+.existingUser a:hover {
+    color:rgb(8, 34, 8);
+}
+
+
+
+@media only screen and (max-width:1256px) {
+    .form-row input[type="submit"] {
+        position:absolute;
+        top:20rem;
+    }
+
+    .leftSide {
+        height:20vh;
+    }
+
+    .sidebar {
+        margin-top:50px;
+    }
+
+    .leftSide footer {
+        margin-top:200px;
+    }
+}
+
+@media only screen and (max-width:722px) {
+    .form-row input[type="submit"] {
+        position:absolute;
+        top:30rem;
+    }
+    .sidebar {
+        margin-top:50px;
+    }
+
+    .leftSide footer {
+        margin-top:200px;
+    }
+
+}

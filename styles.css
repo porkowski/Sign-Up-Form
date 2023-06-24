@@ -45,12 +45,13 @@ body {
 
 .leftSide footer{
     margin-bottom:2.5vh;
-    color:gray;
+    color:rgb(88, 88, 88);
     text-align:center;
 }
 
 .leftSide a {
     color:rgb(48, 48, 48);
+    font-weight:800;
 }
 
 .rightSide {
@@ -156,7 +157,53 @@ input[type="password"]:focus {
     color:rgb(8, 34, 8);
 }
 
+input:invalid:optional {
+    border-color:red;
+}
 
+input:invalid {
+    border-color:red;
+}
+
+input + span {
+    position:relative;
+}
+
+input[type="text"]:invalid + span::after {
+    position:absolute;
+    font-size:.6rem;
+    font-weight:400;
+    content:"Please enter a valid name ."
+}
+
+input[type="email"]:invalid + span::after {
+    position:absolute;
+    font-size:.6rem;
+    font-weight:400;
+    content:"Please enter a valid email address."
+}
+
+input[type="tel"]:invalid + span::after {
+    position:absolute;
+    font-size:.6rem;
+    font-weight:400;
+    content:"Please enter a valid phone #."
+}
+
+input[type="password"]:invalid + span::after {
+    position:absolute;
+    font-size:.6rem;
+    font-weight:400;
+    content:"Please enter a secure password."
+}
+
+input[type="password"].error.active + span::after {
+    position:absolute;
+    font-size:.6rem;
+    font-weight:400;
+    color:red;
+    content:"Passwords do not match."    
+}
 
 @media only screen and (max-width:1256px) {
     .form-row input[type="submit"] {

@@ -35,31 +35,37 @@
 <div class ="form">
     <h1>Let's get started!</h1>
 
-    <form action="" method="get">
+    <form action="" method="get" id="form">
         <div class ="container1">
             <div class="form-row">
                 <label for="firstName">FIRST NAME</label>
-                <input type="text" name="first name" id="firstName">
+                <input type="text" name="first name" id="firstName" minlength="2" maxlength="20" placeholder="John">
+                <span></span>
             </div>
             <div class="form-row">
                 <label for="lastName">LAST NAME</label>
-                <input type="text" name="last name" id="lastName">
+                <input type="text" name="last name" id="lastName" minlength="2" maxlength="20" placeholder="Appleseed">
+                <span></span>
             </div>
             <div class="form-row">
-                <label for="email">EMAIL</label>
-                <input type="email" name="e-mail" id="email">
+                <label for="email">EMAIL <span aria-label="required">*</span></label>
+                <input type="email" name="e-mail" id="email" placeholder="j.appleseed@gmail.com" required>
+                <span></span>
             </div>
             <div class="form-row">
                 <label for="phoneNumber">PHONE NUMBER</label>
-                <input type="tel" name="phone number" id="phoneNumber">
+                <input type="tel" name="phone number" id="phoneNumber" pattern="\d{3}-\d{3}-\d{4}" placeholder="888-888-8888">
+                <span></span>
             </div>
             <div class="form-row">
-                <label for="password">PASSWORD</label>
-                <input type="password" name="password" id="password" class="error">
+                <label for="password">PASSWORD <span aria-label="required">*</span></label>
+                <input type="password" name="password" id="password" class="error" minlength="5" required>
+                <span></span>
             </div>
             <div class="form-row">
-                <label for="confirmPW">PASSWORD</label>
-                <input type="password" name="confirmPassword" id="confirmPW" class="error">
+                <label for="confirmPW">CONFIRM PASSWORD <span aria-label="required">*</span></label>
+                <input type="password" name="confirmPassword" id="confirmPW" class="error" minlength="5" required>
+                <span></span>
             </div>
         </div>
 
@@ -73,6 +79,23 @@
 <p class="existingUser">Already have an account? <a>Log In</a></p>
 
 </div>
+
+<script>
+
+const form = document.getElementById("form");
+const password = document.getElementById("password");
+const confirmPass = document.getElementById("confirmPW");
+
+
+form.addEventListener("submit", (event) => {
+    if (confirmPass.value !== password.value) {
+        event.preventDefault();
+        confirmPass.className = "error active";
+    }else {
+        confirmPass.className = "error";
+    }
+})
+</script>
 
 </body>
 </html>
